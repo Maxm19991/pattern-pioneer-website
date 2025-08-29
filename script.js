@@ -67,10 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const patternCards = document.querySelectorAll('.pattern-card');
     patternCards.forEach(card => {
         card.addEventListener('click', function() {
-            // You would implement pattern detail/purchase modal here
-            const patternName = this.querySelector('h3').textContent;
-            alert(`Opening ${patternName} details...`);
+            // Navigate to all patterns page
+            window.location.href = 'all-patterns.html';
         });
+        
+        // Add pointer cursor to indicate clickability
+        card.style.cursor = 'pointer';
     });
     
     // Add scroll effect to navigation
